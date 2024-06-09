@@ -3,9 +3,9 @@ import json
 
 from .agent import urlopen
 
-from pycoin.networks.default import get_current_netcode
-from pycoin.serialize import b2h_rev, h2b, h2b_rev
-from pycoin.tx.Tx import Spendable, Tx
+from pycoin_.networks.default import get_current_netcode
+from pycoin_.serialize import b2h_rev, h2b, h2b_rev
+from pycoin_.tx.Tx import Spendable, Tx
 
 
 class ChainSoProvider(object):

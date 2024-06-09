@@ -6,7 +6,7 @@ from binascii import b2a_hex, a2b_hex
 from io import BytesIO
 from pprint import pprint, pformat
 from decimal import Decimal
-from pycoin.key.BIP32Node import BIP32Node
+from pycoin_.key.BIP32Node import BIP32Node
 from .psbt import BasicPSBT, BasicPSBTInput, BasicPSBTOutput, PSBT_IN_REDEEM_SCRIPT
 
 # all possible addr types, including multisig/scripts
@@ -47,7 +47,7 @@ def fake_dest_addr(style='p2pkh'):
 def make_change_addr(wallet, style):
     # provide script, pubkey and xpath for a legit-looking change output
     import struct, random
-    from pycoin.encoding import hash160
+    from pycoin_.encoding import hash160
 
     redeem_scr, actual_scr = None, None
     deriv = [12, 34, random.randint(0, 1000)]
@@ -81,15 +81,15 @@ def fake_txn(num_ins, num_outs, master_xpub=None, subpath="0/%d", fee=10000,
     # make various size txn's ... completely fake and pointless values
     # - but has UTXO's to match needs
     # - input total = num_inputs * 1BTC
-    from pycoin.tx.Tx import Tx
-    from pycoin.tx.TxIn import TxIn
-    from pycoin.tx.TxOut import TxOut
-    from pycoin.serialize import h2b_rev
+    from pycoin_.tx.Tx import Tx
+    from pycoin_.tx.TxIn import TxIn
+    from pycoin_.tx.TxOut import TxOut
+    from pycoin_.serialize import h2b_rev
     from struct import pack
 
     psbt = BasicPSBT()
     txn = Tx(2,[],[])
-    
+
     # we have a key; use it to provide "plausible" value inputs
     if master_xpub:
         mk = BIP32Node.from_wallet_key(master_xpub)
@@ -180,12 +180,12 @@ def fake_txn(num_ins, num_outs, master_xpub=None, subpath="0/%d", fee=10000,
     psbt.serialize(rv)
 
     return rv.getvalue(), [(n, render_address(s, is_testnet), ic) for n,s,ic in outputs]
-                                 
+
 
 def render_address(script, testnet=True):
     # take a scriptPubKey (part of the TxOut) and convert into conventional human-readable
     # string... aka: the "payment address"
-    from pycoin.encoding import b2a_hashed_base58
+    from pycoin_.encoding import b2a_hashed_base58
     from .segwit_addr import encode as bech32_encode
 
     ll = len(script)

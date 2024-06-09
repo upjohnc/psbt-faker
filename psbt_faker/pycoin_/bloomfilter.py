@@ -1,7 +1,7 @@
 import math
 import struct
 
-from pycoin.encoding import bitcoin_address_to_hash160_sec
+from pycoin_.encoding import bitcoin_address_to_hash160_sec
 
 LOG_2 = math.log(2)
 

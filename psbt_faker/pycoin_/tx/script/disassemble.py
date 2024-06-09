@@ -1,14 +1,14 @@
-from pycoin.ecdsa import generator_secp256k1, possible_public_pairs_for_signature
-from pycoin.encoding import (public_pair_to_bitcoin_address, hash160_sec_to_bitcoin_address,
+from pycoin_.ecdsa import generator_secp256k1, possible_public_pairs_for_signature
+from pycoin_.encoding import (public_pair_to_bitcoin_address, hash160_sec_to_bitcoin_address,
                              sec_to_public_pair, is_sec_compressed)
 
-from pycoin.serialize import b2h
-from pycoin.tx.script.tools import get_opcode, bin_script
-from pycoin.tx.script.opcodes import INT_TO_OPCODE
-from pycoin.tx.script.vm import eval_script, is_pay_to_script_hash
+from pycoin_.serialize import b2h
+from pycoin_.tx.script.tools import get_opcode, bin_script
+from pycoin_.tx.script.opcodes import INT_TO_OPCODE
+from pycoin_.tx.script.vm import eval_script, is_pay_to_script_hash
 
-from pycoin.tx.script.check_signature import parse_signature_blob
-from pycoin.tx.Tx import SIGHASH_ALL, SIGHASH_NONE, SIGHASH_SINGLE, SIGHASH_ANYONECANPAY
+from pycoin_.tx.script.check_signature import parse_signature_blob
+from pycoin_.tx.Tx import SIGHASH_ALL, SIGHASH_NONE, SIGHASH_SINGLE, SIGHASH_ANYONECANPAY
 
 
 def sighash_type_to_string(sighash_type):

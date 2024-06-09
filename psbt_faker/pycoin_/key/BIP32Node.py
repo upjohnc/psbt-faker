@@ -48,7 +48,7 @@ from ..encoding import a2b_hashed_base58, b2a_hashed_base58, from_bytes_32, to_b
 from ..encoding import sec_to_public_pair, public_pair_to_hash160_sec, EncodingError
 from ..networks import prv32_prefix_for_netcode, pub32_prefix_for_netcode
 from .validate import netcode_and_type_for_data
-from .Key import Key
+from pycoin_.key.Key import Key
 from .bip32 import subkey_public_pair_chain_code_pair, subkey_secret_exponent_chain_code_pair
 
 

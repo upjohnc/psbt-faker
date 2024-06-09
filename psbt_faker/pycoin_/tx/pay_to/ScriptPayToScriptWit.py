@@ -1,4 +1,4 @@
-from pycoin.intbytes import byte2int
+from pycoin_.intbytes import byte2int
 
 from ..script import tools
 
@@ -6,7 +6,7 @@ from ...serialize import b2h
 
 from .ScriptType import ScriptType
 
-from pycoin.contrib import segwit_addr
+from pycoin_.contrib import segwit_addr
 
 
 class ScriptPayToScriptWit(ScriptType):
@@ -65,8 +65,8 @@ class ScriptPayToScriptWit(ScriptType):
 
     def info(self, netcode=None):
         def address_f(netcode=netcode):
-            from pycoin.networks import bech32_hrp_for_netcode
-            from pycoin.networks.default import get_current_netcode
+            from pycoin_.networks import bech32_hrp_for_netcode
+            from pycoin_.networks.default import get_current_netcode
             if netcode is None:
                 netcode = get_current_netcode()
 

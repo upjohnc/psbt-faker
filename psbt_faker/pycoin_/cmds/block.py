@@ -3,10 +3,10 @@
 import argparse
 import datetime
 
-from pycoin.block import Block
-from pycoin.cmds.tx import dump_tx
-from pycoin.networks.default import get_current_netcode
-from pycoin.serialize import b2h, b2h_rev, stream_to_bytes
+from pycoin_.block import Block
+from pycoin_.cmds.tx import dump_tx
+from pycoin_.networks.default import get_current_netcode
+from pycoin_.serialize import b2h, b2h_rev, stream_to_bytes
 
 
 def dump_block(block, netcode=None):

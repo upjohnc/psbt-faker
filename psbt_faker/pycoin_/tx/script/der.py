@@ -31,7 +31,7 @@ THE SOFTWARE.
 """
 
 import binascii
-from pycoin.intbytes import int2byte
+from pycoin_.intbytes import int2byte
 
 
 class UnexpectedDER(Exception):

@@ -1,5 +1,5 @@
 # import pycoin_
-# from pycoin.intbytes import int2byte
+# from pycoin_.intbytes import int2byte
 # def faker():
 
 #     print('good')
@@ -17,7 +17,9 @@
 # That will create the command "psbt_faker" in your path... or just use "./main.py ..." here
 #
 #
+# from psbt_faker.pycoin_.key.BIP32Node import BIP32Node
 import click,struct
+from decimal import Decimal
 # import click, sys, os, pdb, struct, io, json, re, time
 # from pprint import pformat, pprint
 from binascii import b2a_hex as _b2a_hex
@@ -36,7 +38,7 @@ from binascii import b2a_hex as _b2a_hex
 # import urllib.request
 
 ADDR_STYLES = ['p2wpkh', 'p2wsh', 'p2sh', 'p2pkh', 'p2wsh-p2sh', 'p2wpkh-p2sh', 'p2tr']
-# from psbt_faker.txn import ADDR_STYLES
+from psbt_faker.txn import fake_txn
 
 b2a_hex = lambda a: str(_b2a_hex(a), 'ascii')
 #xfp2hex = lambda a: b2a_hex(a[::-1]).upper()
@@ -109,8 +111,10 @@ def faker(num_change, num_outs, out_psbt, value, testnet, xpub, segwit, fee, sty
         print(" %.8f => miners fee" % (Decimal(fee)/Decimal(1E8)))
 
     #print("\nPSBT to be signed: " + out_psbt.name, end='\n\n')
-
+def main():
+    print('good')
 if __name__ == '__main__':
+    # main()
     faker()
 
 # EOF

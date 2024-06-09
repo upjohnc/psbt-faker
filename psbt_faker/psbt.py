@@ -8,10 +8,10 @@ from binascii import b2a_hex as _b2a_hex
 from binascii import a2b_hex as _a2b_hex
 from collections import namedtuple
 from base64 import b64encode
-from pycoin.tx.Tx import Tx
-#from pycoin.tx.TxOut import TxOut
-#from pycoin.encoding import b2a_hashed_base58, a2b_hashed_base58
-from pycoin.tx.script.check_signature import parse_signature_blob
+from pycoin_.tx.Tx import Tx
+#from pycoin_.tx.TxOut import TxOut
+#from pycoin_.encoding import b2a_hashed_base58, a2b_hashed_base58
+from pycoin_.tx.script.check_signature import parse_signature_blob
 from binascii import b2a_hex, a2b_hex
 from base64 import b64decode
 
@@ -55,7 +55,7 @@ def deser_compact_size(f):
         nit = f.read(1)[0]
     except IndexError:
         return None     # end of file
-    
+
     if nit == 253:
         nit = struct.unpack("<H", f.read(2))[0]
     elif nit == 254:
@@ -123,7 +123,7 @@ class BasicPSBTInput(PSBTSection):
         if rv:
             # NOTE: equality test on signatures requires parsing DER stupidness
             #       and some maybe understanding of R/S values on curve that I don't have.
-            assert all(parse_signature_blob(a.part_sigs[k]) 
+            assert all(parse_signature_blob(a.part_sigs[k])
                             == parse_signature_blob(b.part_sigs[k]) for k in a.part_sigs)
         return rv
 
@@ -149,8 +149,8 @@ class BasicPSBTInput(PSBTSection):
             self.witness_script = val
             assert not key
         elif kt in ( PSBT_IN_REDEEM_SCRIPT,
-                     PSBT_IN_WITNESS_SCRIPT, 
-                     PSBT_IN_FINAL_SCRIPTSIG, 
+                     PSBT_IN_WITNESS_SCRIPT,
+                     PSBT_IN_FINAL_SCRIPTSIG,
                      PSBT_IN_FINAL_SCRIPTWITNESS):
             assert not key
             self.others[kt] = val
@@ -236,7 +236,7 @@ class BasicPSBT:
         assert raw[0:5] == b'psbt\xff', "bad magic"
 
         with io.BytesIO(raw[5:]) as fd:
-            
+
             # globals
             while 1:
                 ks = deser_compact_size(fd)

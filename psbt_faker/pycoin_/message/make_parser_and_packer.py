@@ -1,8 +1,8 @@
 import io
 import struct
 
-from pycoin.encoding import double_sha256
-from pycoin.serialize import b2h_rev, bitcoin_streamer
+from pycoin_.encoding import double_sha256
+from pycoin_.serialize import b2h_rev, bitcoin_streamer
 
 from .InvItem import InvItem
 from .PeerAddress import PeerAddress

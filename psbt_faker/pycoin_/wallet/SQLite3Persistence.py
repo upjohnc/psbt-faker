@@ -1,6 +1,6 @@
-from pycoin.serialize import b2h, h2b, b2h_rev, h2b_rev
-from pycoin.key.BIP32Node import BIP32Node
-from pycoin.tx import Spendable
+from pycoin_.serialize import b2h, h2b, b2h_rev, h2b_rev
+from pycoin_.key.BIP32Node import BIP32Node
+from pycoin_.tx import Spendable
 
 
 class SQLite3Persistence(object):

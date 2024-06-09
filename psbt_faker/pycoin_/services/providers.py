@@ -2,7 +2,7 @@ import re
 import threading
 import warnings
 
-from pycoin.networks.default import get_current_netcode
+from pycoin_.networks.default import get_current_netcode
 
 from .bitcoind import BitcoindProvider
 from .blockexplorer import BlockExplorerProvider

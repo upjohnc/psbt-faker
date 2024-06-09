@@ -5,9 +5,9 @@ from __future__ import print_function
 import argparse
 import sys
 
-from pycoin import encoding
-from pycoin.contrib.msg_signing import sign_message, pair_for_message, hash_for_signing
-from pycoin.networks import address_prefix_for_netcode, full_network_name_for_netcode, network_codes
+from pycoin_ import encoding
+from pycoin_.contrib.msg_signing import sign_message, pair_for_message, hash_for_signing
+from pycoin_.networks import address_prefix_for_netcode, full_network_name_for_netcode, network_codes
 from .ku import parse_key, prefix_transforms_for_network
 
 

@@ -1,10 +1,10 @@
 import hashlib
 import itertools
 
-from pycoin import ecdsa
-from pycoin.encoding import double_sha256, from_bytes_32, to_bytes_32
-from pycoin.key import Key
-from pycoin.serialize import b2h
+from pycoin_ import ecdsa
+from pycoin_.encoding import double_sha256, from_bytes_32, to_bytes_32
+from pycoin_.key import Key
+from pycoin_.serialize import b2h
 
 ORDER = ecdsa.generator_secp256k1.order()
 

@@ -1,4 +1,4 @@
-from pycoin.intbytes import byte2int, iterbytes
+from pycoin_.intbytes import byte2int, iterbytes
 
 from ..script import tools
 
@@ -10,7 +10,7 @@ from ..exceptions import SolvingError
 
 from .ScriptType import ScriptType
 
-from pycoin.contrib import segwit_addr
+from pycoin_.contrib import segwit_addr
 
 
 class ScriptPayToAddressWit(ScriptType):
@@ -81,8 +81,8 @@ class ScriptPayToAddressWit(ScriptType):
 
     def info(self, netcode=None):
         def address_f(netcode=netcode):
-            from pycoin.networks import bech32_hrp_for_netcode
-            from pycoin.networks.default import get_current_netcode
+            from pycoin_.networks import bech32_hrp_for_netcode
+            from pycoin_.networks.default import get_current_netcode
             if netcode is None:
                 netcode = get_current_netcode()
 

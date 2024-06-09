@@ -7,14 +7,14 @@ import io
 
 from .agent import request, urlencode, urlopen
 
-from pycoin.block import Block
-from pycoin.convention import btc_to_satoshi
-from pycoin.encoding import double_sha256
-from pycoin.merkle import merkle
-from pycoin.networks.default import get_current_netcode
-from pycoin.serialize import b2h, b2h_rev, h2b, h2b_rev
-from pycoin.tx.script import tools
-from pycoin.tx.Tx import Spendable, Tx, TxIn, TxOut
+from pycoin_.block import Block
+from pycoin_.convention import btc_to_satoshi
+from pycoin_.encoding import double_sha256
+from pycoin_.merkle import merkle
+from pycoin_.networks.default import get_current_netcode
+from pycoin_.serialize import b2h, b2h_rev, h2b, h2b_rev
+from pycoin_.tx.script import tools
+from pycoin_.tx.Tx import Spendable, Tx, TxIn, TxOut
 
 
 class InsightProvider(object):

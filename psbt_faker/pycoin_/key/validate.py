@@ -5,7 +5,7 @@ from ..intbytes import byte2int, int2byte
 from ..networks.registry import network_codes, network_prefixes, bech32_prefixes
 from ..serialize import h2b
 from ..contrib.segwit_addr import bech32_decode, convertbits
-from pycoin.tx.script.tools import bin_script
+from pycoin_.tx.script.tools import bin_script
 
 DEFAULT_ADDRESS_TYPES = ["address", "pay_to_script"]
 

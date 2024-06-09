@@ -1,16 +1,16 @@
 import hashlib
 
-from pycoin import encoding
+from pycoin_ import encoding
 
-from pycoin.contrib import segwit_addr
-from pycoin.intbytes import iterbytes
-from pycoin.key.validate import netcode_and_type_for_text
-from pycoin.networks import (
+from pycoin_.contrib import segwit_addr
+from pycoin_.intbytes import iterbytes
+from pycoin_.key.validate import netcode_and_type_for_text
+from pycoin_.networks import (
     bech32_hrp_for_netcode, pay_to_script_prefix_for_netcode
 )
-from pycoin.networks.default import get_current_netcode
+from pycoin_.networks.default import get_current_netcode
 
-from pycoin.tx.pay_to import (
+from pycoin_.tx.pay_to import (
     ScriptPayToAddress, ScriptPayToScript,
     ScriptPayToAddressWit, ScriptPayToScriptWit, script_obj_from_script
 )

@@ -99,7 +99,7 @@ def check_low_der_signature(sig_pair):
 
 def check_defined_hashtype_signature(sig):
     # IsDefinedHashtypeSignature
-    from pycoin.tx.Tx import SIGHASH_ALL, SIGHASH_SINGLE, SIGHASH_ANYONECANPAY
+    from pycoin_.tx.Tx import SIGHASH_ALL, SIGHASH_SINGLE, SIGHASH_ANYONECANPAY
     if len(sig) == 0:
         raise ScriptError("signature is length 0")
     hash_type = indexbytes(sig, -1) & (~SIGHASH_ANYONECANPAY)

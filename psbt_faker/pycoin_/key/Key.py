@@ -1,13 +1,13 @@
-from pycoin import ecdsa
-from pycoin.encoding import EncodingError, a2b_hashed_base58, \
+from pycoin_ import ecdsa
+from pycoin_.encoding import EncodingError, a2b_hashed_base58, \
     from_bytes_32, hash160, hash160_sec_to_bitcoin_address, \
     is_sec_compressed, public_pair_to_sec, public_pair_to_hash160_sec, \
     sec_to_public_pair, secret_exponent_to_wif
-from pycoin.key.validate import netcode_and_type_for_data
-from pycoin.networks import address_prefix_for_netcode, wif_prefix_for_netcode
-from pycoin.networks.default import get_current_netcode
-from pycoin.serialize import b2h
-from pycoin.tx.script.der import sigencode_der, sigdecode_der
+from pycoin_.key.validate import netcode_and_type_for_data
+from pycoin_.networks import address_prefix_for_netcode, wif_prefix_for_netcode
+from pycoin_.networks.default import get_current_netcode
+from pycoin_.serialize import b2h
+from pycoin_.tx.script.der import sigencode_der, sigdecode_der
 
 
 class InvalidPublicPairError(ValueError):
@@ -91,7 +91,7 @@ class Key(object):
 
         if key_type in ("pub32", "prv32"):
             # TODO: fix this... it doesn't belong here
-            from pycoin.key.BIP32Node import BIP32Node
+            from pycoin_.key.BIP32Node import BIP32Node
             return BIP32Node.from_wallet_key(text)
 
         if key_type == 'wif':

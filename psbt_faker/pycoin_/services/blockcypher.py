@@ -3,9 +3,9 @@ import io
 
 from .agent import urlopen
 
-from pycoin.networks.default import get_current_netcode
-from pycoin.serialize import b2h_rev, h2b, h2b_rev
-from pycoin.tx.Tx import Spendable, Tx
+from pycoin_.networks.default import get_current_netcode
+from pycoin_.serialize import b2h_rev, h2b, h2b_rev
+from pycoin_.tx.Tx import Spendable, Tx
 
 
 class BlockcypherProvider(object):
@@ -43,7 +43,7 @@ class BlockcypherProvider(object):
 
     def tx_for_tx_hash(self, tx_hash):
         """
-        returns the pycoin.tx object for tx_hash
+        returns the pycoin_.tx object for tx_hash
         """
         try:
             url_append = "?token=%s&includeHex=true" % self.api_key

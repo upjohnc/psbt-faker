@@ -77,8 +77,8 @@ class ScriptPayToPublicKey(ScriptType):
         hash160 = encoding.hash160(self.sec)
 
         def address_f(netcode=netcode):
-            from pycoin.networks import address_prefix_for_netcode
-            from pycoin.networks.default import get_current_netcode
+            from pycoin_.networks import address_prefix_for_netcode
+            from pycoin_.networks.default import get_current_netcode
             if netcode is None:
                 netcode = get_current_netcode()
             address_prefix = address_prefix_for_netcode(netcode)

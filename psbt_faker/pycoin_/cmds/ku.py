@@ -8,16 +8,16 @@ import re
 import subprocess
 import sys
 
-from pycoin import encoding
-from pycoin.ecdsa import is_public_pair_valid, generator_secp256k1, public_pair_for_x, secp256k1
-from pycoin.serialize import b2h, h2b
-from pycoin.key import Key
-from pycoin.key.key_from_text import key_from_text
-from pycoin.key.BIP32Node import BIP32Node
-from pycoin.networks import full_network_name_for_netcode, network_name_for_netcode, network_codes
-from pycoin.networks.default import get_current_netcode
-from pycoin.ui import address_for_pay_to_script
-from pycoin.tx.pay_to.ScriptPayToAddressWit import ScriptPayToAddressWit
+from pycoin_ import encoding
+from pycoin_.ecdsa import is_public_pair_valid, generator_secp256k1, public_pair_for_x, secp256k1
+from pycoin_.serialize import b2h, h2b
+from pycoin_.key import Key
+from pycoin_.key.key_from_text import key_from_text
+from pycoin_.key.BIP32Node import BIP32Node
+from pycoin_.networks import full_network_name_for_netcode, network_name_for_netcode, network_codes
+from pycoin_.networks.default import get_current_netcode
+from pycoin_.ui import address_for_pay_to_script
+from pycoin_.tx.pay_to.ScriptPayToAddressWit import ScriptPayToAddressWit
 
 
 SEC_RE = re.compile(r"^(0[23][0-9a-fA-F]{64})|(04[0-9a-fA-F]{128})$")

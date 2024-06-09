@@ -3,7 +3,7 @@
 
 from collections import namedtuple
 
-from pycoin.serialize import h2b
+from pycoin_.serialize import h2b
 
 NetworkValues = namedtuple('NetworkValues',
                            ('network_name', 'subnet_name', 'code', 'wif', 'address',

@@ -5,7 +5,7 @@ from pycoin import ecdsa
 from ..script import der, opcodes, tools
 
 
-from pycoin.intbytes import int2byte
+from pycoin_.intbytes import int2byte
 
 
 def generate_default_placeholder_signature():
@@ -90,7 +90,7 @@ class ScriptType(object):
         return der.sigencode_der(r, s) + int2byte(signature_type)
 
     def address(self, netcode=None):
-        from pycoin.networks.default import get_current_netcode
+        from pycoin_.networks.default import get_current_netcode
         if netcode is None:
             netcode = get_current_netcode()
         return self.info().get("address_f", lambda n: "(unknown)")(netcode)
