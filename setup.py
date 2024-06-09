@@ -5,6 +5,7 @@
 #   pip install --editable .
 
 from setuptools import setup, find_packages
+# import psbt_faker
 
 VERSION = '1.3'
 
@@ -30,8 +31,9 @@ if __name__ == '__main__':
         ],
         entry_points='''
             [console_scripts]
-            psbt_faker=psbt_faker:faker
+            psbt_faker=psbt_faker.main:faker
         ''',
+            # psbt_faker=psbt_faker.main:faker
         classifiers=[
             "Programming Language :: Python :: 3",
             "License :: OSI Approved :: MIT License",
