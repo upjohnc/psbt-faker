@@ -84,7 +84,6 @@ def fake_txn(num_ins, num_outs, master_xpub=None, subpath="0/%d", fee=10000,
     from pycoin_.tx.Tx import Tx
     from pycoin_.tx.TxIn import TxIn
     from pycoin_.tx.TxOut import TxOut
-    from pycoin_.serialize import h2b_rev
     from struct import pack
 
     psbt = BasicPSBT()
