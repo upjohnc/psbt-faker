@@ -28,17 +28,17 @@ fn whamo() -> PyResult<i32> {
         path.call_method1("append", ("./",))?;
         path.call_method1("append", ("./psbt_faker",))?;
 
-        let app: Py<PyAny> = PyModule::from_code_bound(py, py_te, "", "")?
-            .getattr("fake_txn")?
-            .into();
-        // let app: Py<PyAny> = PyModule::from_code(py, py_foo, "", "")?
-        //     .getattr("what")?
+        // let app: Py<PyAny> = PyModule::from_code_bound(py, py_te, "", "")?
+        //     .getattr("fake_txn")?
         //     .into();
+        let app: Py<PyAny> = PyModule::from_code(py, py_foo, "", "")?
+            .getattr("what")?
+            .into();
         // let args = PyTuple::new(py, &[12, 12]);
         let args = (12, 12);
-        Ok(app.call1(py, args)?)
+        // Ok(app.call1(py, args)?)
         // Ok(what)
-        // app.call0(py)?
+        Ok(app.call0(py)?)
     });
     println!("py: {}", from_python.unwrap());
     Ok(1)

@@ -1,4 +1,3 @@
-import pycoin
 import requests
 
 
